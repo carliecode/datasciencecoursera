@@ -1,5 +1,5 @@
 {
-	"name": "staging_inpatients",
+	"name": "in_patients",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "con_db_health",

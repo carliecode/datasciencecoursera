@@ -185,7 +185,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "staging_inpatients",
+						"referenceName": "in_patients",
 						"type": "DatasetReference"
 					}
 				]
