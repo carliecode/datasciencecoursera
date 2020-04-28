@@ -28,7 +28,7 @@
 					},
 					"sink": {
 						"type": "AzureSqlSink",
-						"preCopyScript": "delete from staging.out_patient",
+						"preCopyScript": "delete from staging.out_patients",
 						"disableMetricsCollection": false
 					},
 					"enableStaging": false,
