@@ -1,0 +1,73 @@
+{
+	"name": "staging_inpatients",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "con_db_health",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Year",
+				"type": "varchar"
+			},
+			{
+				"name": "Hospital Code",
+				"type": "varchar"
+			},
+			{
+				"name": "Jan",
+				"type": "varchar"
+			},
+			{
+				"name": "Feb",
+				"type": "varchar"
+			},
+			{
+				"name": "Mar",
+				"type": "varchar"
+			},
+			{
+				"name": "Apr",
+				"type": "varchar"
+			},
+			{
+				"name": "May",
+				"type": "varchar"
+			},
+			{
+				"name": "Jun",
+				"type": "varchar"
+			},
+			{
+				"name": "Jul",
+				"type": "varchar"
+			},
+			{
+				"name": "Aug",
+				"type": "varchar"
+			},
+			{
+				"name": "Sep",
+				"type": "varchar"
+			},
+			{
+				"name": "Oct",
+				"type": "varchar"
+			},
+			{
+				"name": "Nov",
+				"type": "varchar"
+			},
+			{
+				"name": "Dec",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "staging",
+			"table": "in_patients"
+		}
+	}
+}
