@@ -1,5 +1,5 @@
 {
-	"name": "in_patient1",
+	"name": "out_patient",
 	"properties": {
 		"activities": [
 			{
@@ -28,6 +28,7 @@
 					},
 					"sink": {
 						"type": "AzureSqlSink",
+						"preCopyScript": "delete from staging.out_patient",
 						"disableMetricsCollection": false
 					},
 					"enableStaging": false,
@@ -56,121 +57,31 @@
 							},
 							{
 								"source": {
-									"name": "JAN",
+									"name": "Category",
 									"type": "String"
 								},
 								"sink": {
-									"name": "Jan",
+									"name": "Category",
 									"type": "String"
 								}
 							},
 							{
 								"source": {
-									"name": "FEB",
+									"name": "Male",
 									"type": "String"
 								},
 								"sink": {
-									"name": "Feb",
+									"name": "Male Count",
 									"type": "String"
 								}
 							},
 							{
 								"source": {
-									"name": "MAR",
+									"name": "Female",
 									"type": "String"
 								},
 								"sink": {
-									"name": "Mar",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "APR",
-									"type": "String"
-								},
-								"sink": {
-									"name": "Apr",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "MAY",
-									"type": "String"
-								},
-								"sink": {
-									"name": "May",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "JUN",
-									"type": "String"
-								},
-								"sink": {
-									"name": "Jun",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "JUL",
-									"type": "String"
-								},
-								"sink": {
-									"name": "Jul",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "AUG",
-									"type": "String"
-								},
-								"sink": {
-									"name": "Aug",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "SEP",
-									"type": "String"
-								},
-								"sink": {
-									"name": "Sep",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "OCT",
-									"type": "String"
-								},
-								"sink": {
-									"name": "Oct",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "NOV",
-									"type": "String"
-								},
-								"sink": {
-									"name": "Nov",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "DEC",
-									"type": "String"
-								},
-								"sink": {
-									"name": "Dec",
+									"name": "Female Count",
 									"type": "String"
 								}
 							}
@@ -185,7 +96,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "staging_inpatients",
+						"referenceName": "out_patients",
 						"type": "DatasetReference"
 					}
 				]

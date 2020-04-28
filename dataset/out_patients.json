@@ -1,5 +1,5 @@
 {
-	"name": "staging_inpatients",
+	"name": "out_patients",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "con_db_health",
@@ -17,57 +17,21 @@
 				"type": "varchar"
 			},
 			{
-				"name": "Jan",
+				"name": "Category",
 				"type": "varchar"
 			},
 			{
-				"name": "Feb",
+				"name": "Male Count",
 				"type": "varchar"
 			},
 			{
-				"name": "Mar",
-				"type": "varchar"
-			},
-			{
-				"name": "Apr",
-				"type": "varchar"
-			},
-			{
-				"name": "May",
-				"type": "varchar"
-			},
-			{
-				"name": "Jun",
-				"type": "varchar"
-			},
-			{
-				"name": "Jul",
-				"type": "varchar"
-			},
-			{
-				"name": "Aug",
-				"type": "varchar"
-			},
-			{
-				"name": "Sep",
-				"type": "varchar"
-			},
-			{
-				"name": "Oct",
-				"type": "varchar"
-			},
-			{
-				"name": "Nov",
-				"type": "varchar"
-			},
-			{
-				"name": "Dec",
+				"name": "Female Count",
 				"type": "varchar"
 			}
 		],
 		"typeProperties": {
 			"schema": "staging",
-			"table": "in_patients"
+			"table": "out_patients"
 		}
 	}
 }
