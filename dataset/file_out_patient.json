@@ -1,5 +1,5 @@
 {
-	"name": "file_out_patients",
+	"name": "file_out_patient",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "con_eko360_health_storage",
