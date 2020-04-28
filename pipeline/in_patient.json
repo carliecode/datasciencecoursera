@@ -179,7 +179,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "in_patient",
+						"referenceName": "file_in_patient",
 						"type": "DatasetReference"
 					}
 				],

@@ -1,5 +1,5 @@
 {
-	"name": "in_patient",
+	"name": "file_in_patient",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "con_eko360_health_storage",
