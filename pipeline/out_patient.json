@@ -179,7 +179,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "out_patient",
+						"referenceName": "file_out_patient",
 						"type": "DatasetReference"
 					}
 				],
