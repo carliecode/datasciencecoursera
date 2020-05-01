@@ -1,0 +1,87 @@
+{
+	"name": "admissionbyage",
+	"properties": {
+		"activities": [
+			{
+				"name": "admissionbyage",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"preCopyScript": "delete from staging.admission_by_age",
+						"disableMetricsCollection": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"sink": {
+									"name": "Year",
+									"type": "String"
+								}
+							},
+							{
+								"sink": {
+									"name": "Hospital Code",
+									"type": "String"
+								}
+							},
+							{
+								"sink": {
+									"name": "Age Group",
+									"type": "String"
+								}
+							},
+							{
+								"sink": {
+									"name": "Male Count",
+									"type": "String"
+								}
+							},
+							{
+								"sink": {
+									"name": "Female Count",
+									"type": "String"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "file_admissionbyage",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "admissionbyage",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}

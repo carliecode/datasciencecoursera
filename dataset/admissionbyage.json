@@ -1,0 +1,37 @@
+{
+	"name": "admissionbyage",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "con_db_health",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Year",
+				"type": "varchar"
+			},
+			{
+				"name": "Hospital Code",
+				"type": "varchar"
+			},
+			{
+				"name": "Age Group",
+				"type": "varchar"
+			},
+			{
+				"name": "Male Count",
+				"type": "varchar"
+			},
+			{
+				"name": "Female Count",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "staging",
+			"table": "admission_by_age"
+		}
+	}
+}
