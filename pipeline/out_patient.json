@@ -1,0 +1,107 @@
+{
+	"name": "out_patient",
+	"properties": {
+		"activities": [
+			{
+				"name": "out_patient",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"wildcardFileName": "*"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"preCopyScript": "delete from staging.out_patients",
+						"disableMetricsCollection": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Year",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Year",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Hospital Code",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Hospital Code",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Category",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Category",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Male",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Male Count",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Female",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Female Count",
+									"type": "String"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "file_out_patient",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "out_patients",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}

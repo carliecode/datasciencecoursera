@@ -1,5 +1,5 @@
 {
-	"name": "in_patient",
+	"name": "file_admission_by_age",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "con_eko360_health_storage",
@@ -10,14 +10,31 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileSystem": "inpatients"
+				"fileName": "Admission_Age_2014.dat",
+				"fileSystem": "admissionbyage"
 			},
 			"columnDelimiter": "|",
 			"escapeChar": "\\",
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
-		"schema": []
-	},
-	"type": "Microsoft.DataFactory/factories/datasets"
+		"schema": [
+			{
+				"name": "Year",
+				"type": "String"
+			},
+			{
+				"name": "Age Group",
+				"type": "String"
+			},
+			{
+				"name": "Male Count",
+				"type": "String"
+			},
+			{
+				"name": "Female Count",
+				"type": "String"
+			}
+		]
+	}
 }
