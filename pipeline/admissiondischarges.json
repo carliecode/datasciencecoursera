@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy data1",
+				"name": "admission_discharges",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
