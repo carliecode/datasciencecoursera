@@ -19,18 +19,23 @@
 		},
 		"schema": [
 			{
+				"name": "Year",
 				"type": "String"
 			},
 			{
+				"name": "Hospital Code",
 				"type": "String"
 			},
 			{
+				"name": "Category",
 				"type": "String"
 			},
 			{
+				"name": "Male Count",
 				"type": "String"
 			},
 			{
+				"name": "Female Count",
 				"type": "String"
 			}
 		]
