@@ -1,0 +1,16 @@
+{
+	"name": "admissionsdischarges",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "con_db_health",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "staging",
+			"table": "admissions_discharges"
+		}
+	}
+}
