@@ -1,0 +1,39 @@
+{
+	"name": "file_admissionbyage",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "con_eko360_health_storage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "admissionbyage"
+			},
+			"columnDelimiter": "|",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Year",
+				"type": "String"
+			},
+			{
+				"name": "Age Group",
+				"type": "String"
+			},
+			{
+				"name": "Male Count",
+				"type": "String"
+			},
+			{
+				"name": "Female Count",
+				"type": "String"
+			}
+		]
+	}
+}
