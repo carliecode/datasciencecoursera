@@ -36,30 +36,40 @@
 						"type": "TabularTranslator",
 						"mappings": [
 							{
+								"source": {
+									"name": "Year",
+									"type": "String"
+								},
 								"sink": {
 									"name": "Year",
 									"type": "String"
 								}
 							},
 							{
-								"sink": {
-									"name": "Hospital Code",
+								"source": {
+									"name": "Age Group",
 									"type": "String"
-								}
-							},
-							{
+								},
 								"sink": {
 									"name": "Age Group",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"name": "Male Count",
+									"type": "String"
+								},
 								"sink": {
 									"name": "Male Count",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"name": "Female Count",
+									"type": "String"
+								},
 								"sink": {
 									"name": "Female Count",
 									"type": "String"
