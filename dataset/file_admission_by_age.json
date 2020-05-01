@@ -1,5 +1,5 @@
 {
-	"name": "file_admissionbyage",
+	"name": "file_admission_by_age",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "con_eko360_health_storage",

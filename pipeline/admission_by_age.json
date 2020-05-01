@@ -1,5 +1,5 @@
 {
-	"name": "admissionbyage",
+	"name": "admission_by_age",
 	"properties": {
 		"activities": [
 			{
@@ -80,13 +80,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "file_admissionbyage",
+						"referenceName": "file_admission_by_age",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "admissionbyage",
+						"referenceName": "admission_by_age",
 						"type": "DatasetReference"
 					}
 				]
