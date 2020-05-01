@@ -1,0 +1,43 @@
+{
+	"name": "file_admissiondischarges",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "con_eko360_health_storage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "admissionsdischarges"
+			},
+			"columnDelimiter": "|",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Year",
+				"type": "String"
+			},
+			{
+				"name": "Hospital Code",
+				"type": "String"
+			},
+			{
+				"name": "Category",
+				"type": "String"
+			},
+			{
+				"name": "Male Count",
+				"type": "String"
+			},
+			{
+				"name": "Female Count",
+				"type": "String"
+			}
+		]
+	}
+}
