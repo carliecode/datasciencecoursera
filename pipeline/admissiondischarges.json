@@ -26,9 +26,66 @@
 						}
 					},
 					"sink": {
-						"type": "AzureSqlSink"
+						"type": "AzureSqlSink",
+						"preCopyScript": "delete from staging.admission_discharges",
+						"disableMetricsCollection": false
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Year",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Year",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Hospital Code",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Hospital Code",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Category",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Category",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Male Count",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Male Count",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Female Count",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Female Count",
+									"type": "String"
+								}
+							}
+						]
+					}
 				},
 				"inputs": [
 					{
