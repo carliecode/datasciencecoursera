@@ -19,17 +19,14 @@
 						"type": "DelimitedTextSource",
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
-							"recursive": true,
-							"enablePartitionDiscovery": false
+							"recursive": true
 						},
 						"formatSettings": {
 							"type": "DelimitedTextReadSettings"
 						}
 					},
 					"sink": {
-						"type": "AzureSqlSink",
-						"preCopyScript": "delete from staging.admission_discharges",
-						"disableMetricsCollection": false
+						"type": "AzureSqlSink"
 					},
 					"enableStaging": false,
 					"translator": {
@@ -90,13 +87,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "file_admissiondischarges",
+						"referenceName": "file_admissions_discharges",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "admissionsdischarges",
+						"referenceName": "admissions_discharges",
 						"type": "DatasetReference"
 					}
 				]
