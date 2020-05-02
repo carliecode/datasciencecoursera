@@ -179,13 +179,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "file_in_patient",
+						"referenceName": "in_patient",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "in_patients",
+						"referenceName": "staging_inpatients",
 						"type": "DatasetReference"
 					}
 				]
